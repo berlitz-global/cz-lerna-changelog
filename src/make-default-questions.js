@@ -21,7 +21,7 @@ module.exports = (allPackages, changedPackages) => ([
   {
     type: 'input',
     name: 'scope',
-    message: 'Denote the scope of this change:',
+    message: 'Denote the scope of this change (optional)[lower-case]:',
   },
   {
     type: 'input',
