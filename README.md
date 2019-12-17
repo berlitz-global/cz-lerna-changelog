@@ -1,5 +1,13 @@
 # cz-lerna-changelog
 
-## 1.0
+Here you will find berlitz lerna changelog commitizen config.
 
-Berlitz commitizen lerna changelog config
+When running yarn commit in Max or Blitz the commit wizard from this repo is being ran. We can change any restrictions, messages, and the way it works here.
+
+## Contributing
+
+Open a PR with your changes
+
+## Publishing
+
+Run `prepublish` to build the out the libs, use `npm publish` to publish the package
