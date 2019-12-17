@@ -2,13 +2,13 @@
   "name": "@berlitz/cz-lerna-changelog",
   "description": "Commitizen adapter following the conventional-changelog format.",
   "main": "lib/index.js",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "scripts": {
     "build": "babel src -d lib",
     "commit": "git-cz",
     "test": "mocha --compilers js:babel-register test/**/*.js",
     "prepublish": "npm run build",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
   },
   "files": [
     "lib",
@@ -18,10 +18,8 @@
     "type": "git",
     "url": "https://github.com/berlitz-global/cz-lerna-changelog.git"
   },
-  "author": "Joshua Nelson <jonelson@atlassian.com>, Joscha Feth <jfeth@atlassian.com>",
   "license": "MIT",
   "dependencies": {
-    "@semantic-release/commit-analyzer": "^6.1.0",
     "chalk": "^1.1.3",
     "cz-customizable": "^4.0.0",
     "inquirer-autocomplete-prompt": "^0.7.0",
@@ -39,8 +37,7 @@
     "cz-conventional-changelog": "^1.2.0",
     "inquirer": "^3.0.4",
     "lerna": "^3.4.0",
-    "mocha": "^3.2.0",
-    "semantic-release": "^4.3.5"
+    "mocha": "^3.2.0"
   },
   "directories": {
     "lib": "lib"
