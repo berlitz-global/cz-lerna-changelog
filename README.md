@@ -1,4 +1,4 @@
-# cz-lerna-changelog
+# cz-lerna-changelog [![npm version](https://img.shields.io/npm/v/@berlitz/cz-lerna-changelog.svg)](https://www.npmjs.org/package/@berlitz/cz-lerna-changelog)
 
 Here you will find berlitz lerna changelog commitizen config.
 
