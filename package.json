@@ -2,7 +2,7 @@
   "name": "@berlitz/cz-lerna-changelog",
   "description": "Commitizen adapter following the conventional-changelog format.",
   "main": "lib/index.js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "scripts": {
     "build": "babel src -d lib",
     "commit": "git-cz",
@@ -19,6 +19,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@semantic-release/commit-analyzer": "^9.0.2",
     "chalk": "^1.1.3",
     "cz-customizable": "^4.0.0",
     "inquirer-autocomplete-prompt": "^0.7.0",

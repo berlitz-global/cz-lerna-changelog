@@ -10,4 +10,4 @@ Open a PR with your changes
 
 ## Publishing
 
-Run `prepublish` to build the out the libs, use `npm publish` to publish the package
+Run `npm run build` to build the out the libs, use `npm publish` to publish the package
